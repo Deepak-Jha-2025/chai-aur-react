@@ -8,6 +8,16 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- This script is run by both: react and react-dom available in package.json
+         They provide with all the methods
+         
+         Just like the browser makes a DOM, same way in memory a virtual dom is created 
+         which can be accessed using ReactDom.
+         
+         React can only make SPA (single page application) b/z the html has just one element, i.e the root div
+         and just one page index.html. In just this one page we keep removing and injecting elements that makes
+         the user feel like he's navigating b/w different pages. -->
+    <script type="module" src="/src/main.jsx"></script> 
   </body>
 </html>
