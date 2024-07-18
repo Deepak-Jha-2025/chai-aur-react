@@ -11,7 +11,7 @@ function App() {
   // return value: an array of 2 things, hence using [] to store it (general names)
   // 0th idx = var (a value)
   // 1th idx = fnc (a fnc used to update the 0th idx value counter)
-  let [counter, setCounter] = useState(15) // 15 = default value of counter variable
+  const [counter, setCounter] = useState(15) // 15 = default value of counter variable
 
   // let counter = 15 // updating this variable won't reflect on the UI
 
@@ -19,9 +19,12 @@ function App() {
     // counter = counter + 1 // not reflected on UI (here the UI updateion is controlled by React (using hooks))
 
     // arg: new value to set into the counter var
-    if (counter + 1 <= 20) {
-      setCounter(counter + 1) // updates counter everywhere on the UI
-    }
+    // if (counter + 1 <= 20) {
+    // }
+    setCounter((prevCounter) => prevCounter + 1) // updates counter everywhere on the UI
+    setCounter((prevCounter) => prevCounter + 1) 
+    setCounter((prevCounter) => prevCounter + 1) 
+    setCounter((prevCounter) => prevCounter + 1)
     /*
     When setCounter is passed with the variable, then automatically the entire DOM is analyzed to figure out
     on which places we need to update the values b/z the states have been changed (which are now synced with the UI)
@@ -29,9 +32,9 @@ function App() {
   }
 
   const removeValue = () => {
-    if (counter - 1 >= 0) {
-      setCounter(counter - 1)
-    }
+    // if (counter - 1 >= 0) {
+    // }
+    setCounter(counter - 1)
   }
 
   return (
